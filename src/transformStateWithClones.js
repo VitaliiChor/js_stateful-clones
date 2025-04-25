@@ -27,7 +27,7 @@ function transformStateWithClones(state, actions) {
     if (action.type === 'clear') {
       currentState = {};
     }
-    states.push(currentState);
+    states.push({ ...currentState });
   }
 
   return states;
